@@ -65,6 +65,6 @@ names(data.sub) <- name.new
 ## Creating a second, independent tidy data set with the average of each variable per activity and subject
 
 data.tidy <- aggregate(data.sub[,3:81], by = list(activity = data.sub$activity, subject = data.sub$subject),FUN = mean)
-write.table(x = data.tidy, file = "data_tidy.txt", row.names = FALSE)
+write.table(x = data.tidy, file = "tidy_data.txt", row.names = FALSE)
 
 
